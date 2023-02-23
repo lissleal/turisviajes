@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.encabezado {
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.234);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+.menu {
+    list-style-type: none;
+
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+.menu__item a {
+    color: white;
+    text-decoration: none;
+}
+
+.seccionPrincipal {
+    background-image: url(../img/playa-tropical.jpg);
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccionPrincipal h2 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.552);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* DESTINOS */
+
+.destinos {
+    padding: 100px;
+}
+.destinos h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.tarjetas {
+    display: flex;
+    gap: 40px;
+}
+.tarjeta {
+    position: relative;
+}
+.tarjeta__imagen {
+    width: 100%;
+}
+.tarjeta__titulo {
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    background-color: rgba(0, 0, 0, 0.286);
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+/* DESTINOS2 */
+.tarjetas2 {
+display: flex;
+gap: 40px;
+}
+
+.tarjeta2 {
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 20px;
+}
+.tarjeta2--playa {
+    background-image: url(../img/playa2.jpg);
+}
+
+.tarjeta2--montana {
+    background-image: url(../img/montaña.jpg);
+}
+.tarjeta2--bosque {
+    background-image: url(../img/bosque.jpg);
+}
+.tarjeta2__titulo {
+    background-color: rgba(0, 0, 0, 0.286);
+    color: white;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+/* PAQUETES */
+
+.paquetes {
+    background-image: url(../img/playa-tropical.jpg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    ". texto";
+}
+.paquetes__texto {
+    padding: 100px 60px;
+    background-color: rgba(0, 0, 255, 0.8);
+    color: white;
+    grid-area: texto;
+}
+
+.borde {
+    border-bottom: 3px solid white;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+/* MEDIA QUERYS */
+
+@media screen and (max-width: 1024px) {
+
+    .seccionPrincipal h2 {
+        background-color: red;
+    }
+    
+    .destinos {
+        padding: 50px;
+    }
+
+    .paquetes {
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .seccionPrincipal h2 {
+        background-color: blue;
+    }
+
+    .tarjetas2{
+        flex-direction: column;
+    }
+
+    .paquetes {
+        display: flex;
+    }
+
+}
